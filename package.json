@@ -29,6 +29,10 @@
       {
         "command": "shvmeless.color-commands.to-rgb",
         "title": "Color Commands: Convert to RGB"
+      },
+      {
+        "command": "shvmeless.color-commands.to-hsl",
+        "title": "Color Commands: Convert to HSL"
       }
     ],
     "menus": {
@@ -39,6 +43,10 @@
         },
         {
           "command": "shvmeless.color-commands.to-rgb",
+          "when": "editorHasSelection || editorHasMultipleSelections"
+        },
+        {
+          "command": "shvmeless.color-commands.to-hsl",
           "when": "editorHasSelection || editorHasMultipleSelections"
         }
       ]

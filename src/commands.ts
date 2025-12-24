@@ -21,3 +21,13 @@ export function toRGB(): void {
     return color.toRgbString()
   })
 }
+
+// COMMAND
+export function toHSL(): void {
+  const manager = new EditorManager()
+  manager.replaceAllSelections((text: string) => {
+    const color = colord(text)
+    if (!color.isValid()) return
+    return color.toHslString()
+  })
+}
