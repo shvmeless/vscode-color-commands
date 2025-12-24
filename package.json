@@ -25,12 +25,20 @@
       {
         "command": "shvmeless.color-commands.to-hexadecimal",
         "title": "Color Commands: Convert to Hexadecimal"
+      },
+      {
+        "command": "shvmeless.color-commands.to-rgb",
+        "title": "Color Commands: Convert to RGB"
       }
     ],
     "menus": {
       "commandPalette": [
         {
           "command": "shvmeless.color-commands.to-hexadecimal",
+          "when": "editorHasSelection || editorHasMultipleSelections"
+        },
+        {
+          "command": "shvmeless.color-commands.to-rgb",
           "when": "editorHasSelection || editorHasMultipleSelections"
         }
       ]

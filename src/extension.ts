@@ -9,6 +9,7 @@ export function activate(context: ExtensionContext) {
   const register = new CommandRegister(context)
 
   register.push('to-hexadecimal', commands.toHex)
+  register.push('to-rgb', commands.toRGB)
 
 }
 

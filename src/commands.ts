@@ -11,3 +11,13 @@ export function toHex(): void {
     return color.toHex()
   })
 }
+
+// COMMAND
+export function toRGB(): void {
+  const manager = new EditorManager()
+  manager.replaceAllSelections((text: string) => {
+    const color = colord(text)
+    if (!color.isValid()) return
+    return color.toRgbString()
+  })
+}
