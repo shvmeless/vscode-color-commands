@@ -1,7 +1,14 @@
-// ACTIVATE
-export function activate() {
+// IMPORTS
+import { ExtensionContext } from 'vscode'
+import { CommandRegister } from './lib/CommandRegister'
+import * as commands from './commands'
 
-  console.log('The extension "vscode-color-comands" is now active!')
+// ACTIVATE
+export function activate(context: ExtensionContext) {
+
+  const register = new CommandRegister(context)
+
+  register.push('to-hexadecimal', commands.toHex)
 
 }
 
