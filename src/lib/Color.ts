@@ -84,4 +84,10 @@ export class Color {
     return this
   }
 
+  // METHOD
+  public lighten(value: number): this {
+    this.color = this.color.lighten(value)
+    return this
+  }
+
 }

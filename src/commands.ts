@@ -95,3 +95,13 @@ export async function desaturate(): Promise<void> {
     return new Color(str).desaturate(input).toString()
   })
 }
+
+// COMMAND
+export async function lighten(): Promise<void> {
+  const manager = new EditorManager()
+  const input = await manager.askForNumber({ prompt: 'Enter the value to increase lightness:', min: 0, max: 1 })
+  if (input === undefined) return
+  manager.replaceAllSelections((str: string) => {
+    return new Color(str).lighten(input).toString()
+  })
+}
