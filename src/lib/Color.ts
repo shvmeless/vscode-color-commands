@@ -66,4 +66,10 @@ export class Color {
     return this
   }
 
+  // METHOD
+  public rotate(value: number): this {
+    this.color = this.color.rotate(value)
+    return this
+  }
+
 }

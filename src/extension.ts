@@ -15,6 +15,7 @@ export function activate(context: ExtensionContext) {
   register.push('set-saturation', commands.setSaturation)
   register.push('set-lightness', commands.setLightness)
   register.push('set-alpha', commands.setAlpha)
+  register.push('rotate', commands.rotate)
 
 }
 

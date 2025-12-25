@@ -65,3 +65,13 @@ export async function setAlpha(): Promise<void> {
     return new Color(str).setAlpha(input).toString()
   })
 }
+
+// COMMAND
+export async function rotate(): Promise<void> {
+  const manager = new EditorManager()
+  const input = await manager.askForNumber({ prompt: 'Enter the number of degrees you want to rotate the color:', min: -360, max: 360 })
+  if (input === undefined) return
+  manager.replaceAllSelections((str: string) => {
+    return new Color(str).rotate(input).toString()
+  })
+}
