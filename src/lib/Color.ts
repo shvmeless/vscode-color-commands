@@ -60,4 +60,10 @@ export class Color {
     return this
   }
 
+  // METHOD
+  public setAlpha(value: number): this {
+    this.color = this.color.alpha(value)
+    return this
+  }
+
 }

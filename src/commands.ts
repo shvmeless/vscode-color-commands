@@ -55,3 +55,13 @@ export async function setLightness(): Promise<void> {
     return new Color(str).setLightness(input).toString()
   })
 }
+
+// COMMAND
+export async function setAlpha(): Promise<void> {
+  const manager = new EditorManager()
+  const input = await manager.askForNumber({ prompt: 'Enther the alpha value:', min: 0, max: 1 })
+  if (input === undefined) return
+  manager.replaceAllSelections((str: string) => {
+    return new Color(str).setAlpha(input).toString()
+  })
+}
