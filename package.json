@@ -65,6 +65,10 @@
       {
         "command": "shvmeless.color-commands.lighten",
         "title": "Color Commands: Lighten Color"
+      },
+      {
+        "command": "shvmeless.color-commands.darken",
+        "title": "Color Commands: Darken Color"
       }
     ],
     "menus": {
@@ -111,6 +115,10 @@
         },
         {
           "command": "shvmeless.color-commands.lighten",
+          "when": "editorHasSelection || editorHasMultipleSelections"
+        },
+        {
+          "command": "shvmeless.color-commands.darken",
           "when": "editorHasSelection || editorHasMultipleSelections"
         }
       ]

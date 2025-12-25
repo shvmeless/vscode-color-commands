@@ -90,4 +90,10 @@ export class Color {
     return this
   }
 
+  // METHOD
+  public darken(value: number): this {
+    this.color = this.color.darken(value)
+    return this
+  }
+
 }

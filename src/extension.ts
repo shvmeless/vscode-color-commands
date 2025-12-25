@@ -19,6 +19,7 @@ export function activate(context: ExtensionContext) {
   register.push('saturate', commands.saturate)
   register.push('desaturate', commands.desaturate)
   register.push('lighten', commands.lighten)
+  register.push('darken', commands.darken)
 
 }
 
