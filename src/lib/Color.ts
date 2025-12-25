@@ -72,4 +72,10 @@ export class Color {
     return this
   }
 
+  // METHOD
+  public saturate(value: number): this {
+    this.color = this.color.saturate(value)
+    return this
+  }
+
 }

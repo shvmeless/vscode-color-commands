@@ -53,6 +53,10 @@
       {
         "command": "shvmeless.color-commands.rotate",
         "title": "Color Commands: Rotate Color"
+      },
+      {
+        "command": "shvmeless.color-commands.saturate",
+        "title": "Color Commands: Saturate Color"
       }
     ],
     "menus": {
@@ -87,6 +91,10 @@
         },
         {
           "command": "shvmeless.color-commands.rotate",
+          "when": "editorHasSelection || editorHasMultipleSelections"
+        },
+        {
+          "command": "shvmeless.color-commands.saturate",
           "when": "editorHasSelection || editorHasMultipleSelections"
         }
       ]
