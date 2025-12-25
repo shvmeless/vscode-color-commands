@@ -45,3 +45,13 @@ export async function setSaturation(): Promise<void> {
     return new Color(str).setSaturation(input).toString()
   })
 }
+
+// COMMAND
+export async function setLightness(): Promise<void> {
+  const manager = new EditorManager()
+  const input = await manager.askForNumber({ prompt: 'Enther the lightness value:', min: 0, max: 1 })
+  if (input === undefined) return
+  manager.replaceAllSelections((str: string) => {
+    return new Color(str).setLightness(input).toString()
+  })
+}

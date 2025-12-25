@@ -53,4 +53,11 @@ export class Color {
     return this
   }
 
+  // METHOD
+  public setLightness(value: number): this {
+    const lightness = this.color.toHsl().l
+    this.color = this.color.lighten(value - lightness / 100)
+    return this
+  }
+
 }

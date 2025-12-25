@@ -41,6 +41,10 @@
       {
         "command": "shvmeless.color-commands.set-saturation",
         "title": "Color Commands: Set Saturation"
+      },
+      {
+        "command": "shvmeless.color-commands.set-lightness",
+        "title": "Color Commands: Set Lightness"
       }
     ],
     "menus": {
@@ -63,6 +67,10 @@
         },
         {
           "command": "shvmeless.color-commands.set-saturation",
+          "when": "editorHasSelection || editorHasMultipleSelections"
+        },
+        {
+          "command": "shvmeless.color-commands.set-lightness",
           "when": "editorHasSelection || editorHasMultipleSelections"
         }
       ]
