@@ -96,4 +96,10 @@ export class Color {
     return this
   }
 
+  // METHOD
+  public invert(): this {
+    this.color = this.color.invert()
+    return this
+  }
+
 }

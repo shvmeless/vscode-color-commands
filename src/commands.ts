@@ -115,3 +115,11 @@ export async function darken(): Promise<void> {
     return new Color(str).darken(input).toString()
   })
 }
+
+// COMMAND
+export async function invert(): Promise<void> {
+  const manager = new EditorManager()
+  manager.replaceAllSelections((str: string) => {
+    return new Color(str).invert().toString()
+  })
+}
