@@ -46,4 +46,11 @@ export class Color {
     return this
   }
 
+  // METHOD
+  public setSaturation(value: number): this {
+    const saturation = this.color.toHsl().s
+    this.color = this.color.saturate(value - saturation / 100)
+    return this
+  }
+
 }

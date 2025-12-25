@@ -35,3 +35,13 @@ export async function setHue(): Promise<void> {
     return new Color(str).setHue(input).toString()
   })
 }
+
+// COMMAND
+export async function setSaturation(): Promise<void> {
+  const manager = new EditorManager()
+  const input = await manager.askForNumber({ prompt: 'Enther the saturation value:', min: 0, max: 1 })
+  if (input === undefined) return
+  manager.replaceAllSelections((str: string) => {
+    return new Color(str).setSaturation(input).toString()
+  })
+}

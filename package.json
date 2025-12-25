@@ -37,6 +37,10 @@
       {
         "command": "shvmeless.color-commands.set-hue",
         "title": "Color Commands: Set Hue"
+      },
+      {
+        "command": "shvmeless.color-commands.set-saturation",
+        "title": "Color Commands: Set Saturation"
       }
     ],
     "menus": {
@@ -55,6 +59,10 @@
         },
         {
           "command": "shvmeless.color-commands.set-hue",
+          "when": "editorHasSelection || editorHasMultipleSelections"
+        },
+        {
+          "command": "shvmeless.color-commands.set-saturation",
           "when": "editorHasSelection || editorHasMultipleSelections"
         }
       ]

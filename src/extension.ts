@@ -12,6 +12,7 @@ export function activate(context: ExtensionContext) {
   register.push('to-rgb', commands.toRGB)
   register.push('to-hsl', commands.toHSL)
   register.push('set-hue', commands.setHue)
+  register.push('set-saturation', commands.setSaturation)
 
 }
 
