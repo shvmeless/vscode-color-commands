@@ -11,6 +11,7 @@ export function activate(context: ExtensionContext) {
   register.push('to-hexadecimal', commands.toHex)
   register.push('to-rgb', commands.toRGB)
   register.push('to-hsl', commands.toHSL)
+  register.push('set-hue', commands.setHue)
 
 }
 

@@ -25,3 +25,13 @@ export function toHSL(): void {
     return new Color(str).toHSL()
   })
 }
+
+// COMMAND
+export async function setHue(): Promise<void> {
+  const manager = new EditorManager()
+  const input = await manager.askForNumber({ prompt: 'Enther the hue value:', min: 0, max: 360 })
+  if (input === undefined) return
+  manager.replaceAllSelections((str: string) => {
+    return new Color(str).setHue(input).toString()
+  })
+}

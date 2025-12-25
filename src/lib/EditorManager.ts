@@ -26,4 +26,32 @@ export class EditorManager {
     })
   }
 
+  // METHOD
+  public async askForNumber(params: {
+    prompt: string
+    min: number
+    max: number
+  }): Promise<number | undefined> {
+
+    const { prompt, min, max } = params
+
+    let input = await window.showInputBox({
+      prompt,
+      placeHolder: `${min}-${max}`,
+      validateInput: (input: string) => {
+        input = input.replace(/\s/g, '')
+        const number = Number.parseFloat(input)
+        if (isNaN(number)) return 'Please enter a valid number.'
+        if (number < min || number > max) return `Please enter a number between ${min} and ${max}.`
+        return undefined
+      },
+    })
+
+    if (input === undefined) return
+
+    input = input.replace(/\s/g, '')
+    return Number.parseFloat(input)
+
+  }
+
 }

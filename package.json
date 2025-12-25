@@ -33,6 +33,10 @@
       {
         "command": "shvmeless.color-commands.to-hsl",
         "title": "Color Commands: Convert to HSL"
+      },
+      {
+        "command": "shvmeless.color-commands.set-hue",
+        "title": "Color Commands: Set Hue"
       }
     ],
     "menus": {
@@ -47,6 +51,10 @@
         },
         {
           "command": "shvmeless.color-commands.to-hsl",
+          "when": "editorHasSelection || editorHasMultipleSelections"
+        },
+        {
+          "command": "shvmeless.color-commands.set-hue",
           "when": "editorHasSelection || editorHasMultipleSelections"
         }
       ]
