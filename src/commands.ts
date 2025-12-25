@@ -1,33 +1,27 @@
 // IMPORTS
-import { colord } from 'colord'
 import { EditorManager } from './lib/EditorManager'
+import { Color } from './lib/Color'
 
 // COMMAND
 export function toHex(): void {
   const manager = new EditorManager()
-  manager.replaceAllSelections((text: string) => {
-    const color = colord(text)
-    if (!color.isValid()) return
-    return color.toHex()
+  manager.replaceAllSelections((str: string) => {
+    return new Color(str).toHex()
   })
 }
 
 // COMMAND
 export function toRGB(): void {
   const manager = new EditorManager()
-  manager.replaceAllSelections((text: string) => {
-    const color = colord(text)
-    if (!color.isValid()) return
-    return color.toRgbString()
+  manager.replaceAllSelections((str: string) => {
+    return new Color(str).toRGB()
   })
 }
 
 // COMMAND
 export function toHSL(): void {
   const manager = new EditorManager()
-  manager.replaceAllSelections((text: string) => {
-    const color = colord(text)
-    if (!color.isValid()) return
-    return color.toHslString()
+  manager.replaceAllSelections((str: string) => {
+    return new Color(str).toHSL()
   })
 }
