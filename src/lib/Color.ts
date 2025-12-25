@@ -78,4 +78,10 @@ export class Color {
     return this
   }
 
+  // METHOD
+  public desaturate(value: number): this {
+    this.color = this.color.desaturate(value)
+    return this
+  }
+
 }

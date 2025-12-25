@@ -85,3 +85,13 @@ export async function saturate(): Promise<void> {
     return new Color(str).saturate(input).toString()
   })
 }
+
+// COMMAND
+export async function desaturate(): Promise<void> {
+  const manager = new EditorManager()
+  const input = await manager.askForNumber({ prompt: 'Enter the value to decrease saturation:', min: 0, max: 1 })
+  if (input === undefined) return
+  manager.replaceAllSelections((str: string) => {
+    return new Color(str).desaturate(input).toString()
+  })
+}
