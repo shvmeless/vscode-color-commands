@@ -1,7 +1,7 @@
 {
   "name": "color-comands",
   "displayName": "Color Commands",
-  "description": "VSCode extension to convert colors and perform other color operations, directly from the editor.",
+  "description": "Command-base color conversion/manipulation for _Visual Studio Code_.",
   "version": "0.0.1",
   "license": "MIT",
   "publisher": "shvmeless",
@@ -17,6 +17,7 @@
     "vscode": "^1.107.0"
   },
   "main": "./dist/extension.js",
+  "icon": "./assets/icon.png",
   "activationEvents": [
     "onStartupFinished"
   ],
