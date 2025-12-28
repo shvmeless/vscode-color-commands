@@ -1,22 +1,14 @@
+# DEPENDENCIES
+node_modules/
+
 # LOGS
 *.log
 logs
 
-# DEPENDENCIES
-jspm_packages/
-node_modules/
-
 # CACHE
 .cache/
-*.tsbuildinfo
-.stylelintcache
-.eslintcache
-.parcel-cache
 .cache
 .npm
-
-# NPM
-*.tgz
 
 # DOTENV
 .env.*.local
@@ -26,12 +18,11 @@ node_modules/
 temporary/
 temp/
 
-# EXTENSIONS
-*.vsix
-
 # PRODUCTION
-origin/
 output/
 build/
 dist/
 out/
+
+# EXTENSIONS
+*.vsix

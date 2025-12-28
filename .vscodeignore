@@ -17,19 +17,13 @@ yarn.lock
 
 # CONFIGS
 .editorconfig
+esbuild.js
 eslint.config.mjs
 tsconfig.json
-esbuild.js
 
 # TEMP
 temporary/**
 temp/**
-
-# DIST
-output/**
-build/**
-dist/**
-out/**
 
 # EXTENSIONS
 *.vsix
