@@ -2,7 +2,7 @@
   "name": "color-comands",
   "displayName": "Color Commands",
   "description": "Command-base color conversion/manipulation for _Visual Studio Code_.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "MIT",
   "publisher": "shvmeless",
   "author": {
@@ -135,6 +135,15 @@
   },
   "categories": [
     "Other"
+  ],
+  "tags": [
+    "color",
+    "command",
+    "conversion",
+    "manipulation",
+    "hexadecimal",
+    "rgb",
+    "hsl"
   ],
   "scripts": {
     "compile": "pnpm run check-types && pnpm run lint && node esbuild.js",
